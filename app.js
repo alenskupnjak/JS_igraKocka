@@ -28,6 +28,9 @@ const ukupnirezultatIgrac1 = document.getElementById('score-1');
 console.log(aktivIgrac1 )
 
 
+novaIgra();
+
+
 function novaIgra() {
   kockaEkran.src="dice.jpg"
   rezultatIgrac0 = 0;

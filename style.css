@@ -71,7 +71,7 @@ body {
     margin-bottom: 130px;
 }
 
-.active { background-color: #d8bebe; }
+.active { background-color: #eb8b8b; }
 .active .player-name { font-weight: 300; }
 
 .active .player-name::after {
@@ -85,7 +85,7 @@ body {
 }
 
 .player-current-box {
-    background-color: #EB4D4D;
+    background-color: #4d72eb;
     color: #fff;
     width: 40%;
     margin: 0 auto;
