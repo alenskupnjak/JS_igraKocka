@@ -1,14 +1,3 @@
-/*
-GAME RULES:
-
-- The game has 2 players, playing in rounds
-- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
-- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
-- The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
-- The first player to reach 100 points on GLOBAL score wins the game
-
-*/
-
 let rezultatIgrac0 = 0;
 let rezultatIgrac1 = 0;
 let zbrojBacanja = 0;
@@ -17,23 +6,20 @@ trenutniIgrac = 'name-0';
 const novaIgraBtn = document.querySelector('.btn-new');
 const baciKocku = document.querySelector('.btn-roll');
 const zadrziRazultat = document.querySelector('.btn-hold');
-const aktivIgrac0 = document.querySelector('.player-0-panel')
-const aktivIgrac1 = document.querySelector('.player-1-panel')
+const aktivIgrac0 = document.querySelector('.player-0-panel');
+const aktivIgrac1 = document.querySelector('.player-1-panel');
 const kockaEkran= document.querySelector('.kocka');
 const trenutnoBacanjeIgrac0 = document.getElementById('igrac-0');
 const trenutnoBacanjeIgrac1 = document.getElementById('igrac-1');
 const ukupnirezultatIgrac0 = document.getElementById('score-0');
 const ukupnirezultatIgrac1 = document.getElementById('score-1');
-
 const naslovIgrac0 = document.getElementById('name-0');
 const naslovIgrac1 = document.getElementById('name-1');
 
-
 novaIgra();
 
-
 function novaIgra() {
-  kockaEkran.src="dice.jpg"
+  kockaEkran.src="dice.jpg";
   rezultatIgrac0 = 0;
   rezultatIgrac1 = 0;
   zbrojBacanja = 0;
@@ -41,8 +27,8 @@ function novaIgra() {
   trenutnoBacanjeIgrac1.textContent = 0;
   ukupnirezultatIgrac0.textContent = 0;
   ukupnirezultatIgrac1.textContent = 0;
-  naslovIgrac0.textContent = 'Igrač 1'
-  naslovIgrac1.textContent = 'Igrač 2'
+  naslovIgrac0.textContent = 'Igrač 1';
+  naslovIgrac1.textContent = 'Igrač 2';
 };
 
 function bacajKockuFun(){
@@ -51,7 +37,7 @@ function bacajKockuFun(){
     if (trenutniIgrac === 'name-1') {
       aktivIgrac1.classList.remove('active');
       aktivIgrac0.classList.add('active');
-      rezultatIgrac1 = 0
+      rezultatIgrac1 = 0;
       ukupnirezultatIgrac1.textContent = 0;
     }  else {
       aktivIgrac1.classList.add('active');
@@ -82,8 +68,6 @@ function bacajKockuFun(){
   }
   zadnjeBacanje = kocka;
   kockaEkran.src = 'dice-'+ kocka + '.png'
-  // console.log('  rezultatIgrac0= ' + rezultatIgrac0 + ' rezultatIgrac1= ' + rezultatIgrac1 + ' Kocka= ' + kocka + '  zbroj bacanja= ' + zbrojBacanja)
-  // console.log('Trenutni igrac =' + trenutniIgrac )
 }
 
 function zadrziBacanje () {
@@ -104,23 +88,22 @@ function zadrziBacanje () {
   }
 
   if (rezultatIgrac0 > 50) {
-    naslovIgrac0.textContent = 'Pobjednik !'
-    naslovIgrac0.style.color= 'magenta'
+    naslovIgrac0.textContent = 'Pobjednik !';
+    naslovIgrac0.style.color= 'magenta';
   }
 
   if (rezultatIgrac1 > 50) {
-    naslovIgrac1.textContent = 'Pobjednik !'
-    naslovIgrac1.style.color= 'magenta'
+    naslovIgrac1.textContent = 'Pobjednik !';
+    naslovIgrac1.style.color= 'magenta';
   }
-  kockaEkran.src="dice.jpg"
+  kockaEkran.src="dice.jpg";
   zbrojBacanja = 0;
   zadnjeBacanje = 0;
-  // console.log('rezultatIgrac0= ' + rezultatIgrac0 + ' rezultatIgrac1= ' + rezultatIgrac1 + ' Igrac: ' + trenutniIgrac )
 }
 
-baciKocku.addEventListener('click', bacajKockuFun)
+baciKocku.addEventListener('click', bacajKockuFun);
 novaIgraBtn.addEventListener('click', novaIgra);
-zadrziRazultat .addEventListener('click', zadrziBacanje)
+zadrziRazultat .addEventListener('click', zadrziBacanje);
 
 
 
