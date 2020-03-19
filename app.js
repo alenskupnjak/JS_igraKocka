@@ -29,11 +29,6 @@ const naslovIgrac0 = document.getElementById('name-0');
 const naslovIgrac1 = document.getElementById('name-1');
 
 
-
-
-console.log(aktivIgrac1 )
-
-
 novaIgra();
 
 
@@ -86,9 +81,9 @@ function bacajKockuFun(){
           }
   }
   zadnjeBacanje = kocka;
-  console.log('  rezultatIgrac0= ' + rezultatIgrac0 + ' rezultatIgrac1= ' + rezultatIgrac1 + ' Kocka= ' + kocka + '  zbroj bacanja= ' + zbrojBacanja)
-  console.log('Trenutni igrac =' + trenutniIgrac )
   kockaEkran.src = 'dice-'+ kocka + '.png'
+  // console.log('  rezultatIgrac0= ' + rezultatIgrac0 + ' rezultatIgrac1= ' + rezultatIgrac1 + ' Kocka= ' + kocka + '  zbroj bacanja= ' + zbrojBacanja)
+  // console.log('Trenutni igrac =' + trenutniIgrac )
 }
 
 function zadrziBacanje () {
@@ -108,19 +103,19 @@ function zadrziBacanje () {
     trenutnoBacanjeIgrac1.textContent = 0;
   }
 
-  if (rezultatIgrac0 > 40) {
+  if (rezultatIgrac0 > 50) {
     naslovIgrac0.textContent = 'Pobjednik !'
     naslovIgrac0.style.color= 'magenta'
   }
 
-  if (rezultatIgrac1 > 40) {
+  if (rezultatIgrac1 > 50) {
     naslovIgrac1.textContent = 'Pobjednik !'
     naslovIgrac1.style.color= 'magenta'
   }
   kockaEkran.src="dice.jpg"
   zbrojBacanja = 0;
   zadnjeBacanje = 0;
-  console.log('rezultatIgrac0= ' + rezultatIgrac0 + ' rezultatIgrac1= ' + rezultatIgrac1 + ' Igrac: ' + trenutniIgrac )
+  // console.log('rezultatIgrac0= ' + rezultatIgrac0 + ' rezultatIgrac1= ' + rezultatIgrac1 + ' Igrac: ' + trenutniIgrac )
 }
 
 baciKocku.addEventListener('click', bacajKockuFun)
