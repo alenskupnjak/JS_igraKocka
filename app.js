@@ -14,7 +14,6 @@ let rezultatIgrac1 = 0;
 let zbrojBacanja = 0;
 zadnjeBacanje = 0;
 trenutniIgrac = 'name-0';
-
 const novaIgraBtn = document.querySelector('.btn-new');
 const baciKocku = document.querySelector('.btn-roll');
 const zadrziRazultat = document.querySelector('.btn-hold');
@@ -25,6 +24,13 @@ const trenutnoBacanjeIgrac0 = document.getElementById('igrac-0');
 const trenutnoBacanjeIgrac1 = document.getElementById('igrac-1');
 const ukupnirezultatIgrac0 = document.getElementById('score-0');
 const ukupnirezultatIgrac1 = document.getElementById('score-1');
+
+const naslovIgrac0 = document.getElementById('name-0');
+const naslovIgrac1 = document.getElementById('name-1');
+
+
+
+
 console.log(aktivIgrac1 )
 
 
@@ -40,6 +46,8 @@ function novaIgra() {
   trenutnoBacanjeIgrac1.textContent = 0;
   ukupnirezultatIgrac0.textContent = 0;
   ukupnirezultatIgrac1.textContent = 0;
+  naslovIgrac0.textContent = 'Igrač 1'
+  naslovIgrac1.textContent = 'Igrač 2'
 };
 
 function bacajKockuFun(){
@@ -49,10 +57,12 @@ function bacajKockuFun(){
       aktivIgrac1.classList.remove('active');
       aktivIgrac0.classList.add('active');
       rezultatIgrac1 = 0
+      ukupnirezultatIgrac1.textContent = 0;
     }  else {
       aktivIgrac1.classList.add('active');
       aktivIgrac0.classList.remove('active');
-      rezultatIgrac0 = 0
+      rezultatIgrac0 = 0;
+      ukupnirezultatIgrac0.textContent = 0;
     }
   } else if (kocka>1) {
     zbrojBacanja += kocka;
@@ -99,13 +109,13 @@ function zadrziBacanje () {
   }
 
   if (rezultatIgrac0 > 40) {
-    alert(`Igrač 1 je pobjedio sa ${rezultatIgrac0} bodova.`);
-    novaIgra();
+    naslovIgrac0.textContent = 'Pobjednik !'
+    naslovIgrac0.style.color= 'magenta'
   }
 
   if (rezultatIgrac1 > 40) {
-    alert(`Igrač 1 je pobjedio sa ${rezultatIgrac1} bodova.`);
-    novaIgra();
+    naslovIgrac1.textContent = 'Pobjednik !'
+    naslovIgrac1.style.color= 'magenta'
   }
   kockaEkran.src="dice.jpg"
   zbrojBacanja = 0;
