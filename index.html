@@ -2,12 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css"> -->
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
         <link type="text/css" rel="stylesheet" href="style.css">
-        
-        <title>Igra bacanja kockica</title>
+        <title>Igra bacanja kockice</title>
     </head>
 
     <body>
@@ -31,8 +30,8 @@
             </div>
             
             <button class="btn-new"><i class="ion-ios-plus-outline"></i>Nova igra</button>
-            <button class="btn-roll"><i class="ion-ios-loop"></i>Baci kocku</button>
-            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Zadrži</button>
+            <button class="btn-roll"><ion-icon name="arrow-redo-outline"></ion-icon></i>Baci kocku</button>
+            <button class="btn-hold"><ion-icon name="logo-usd"></ion-icon></i>Zadrži</button>
             
             <img src="dice.jpg" alt="Dice" class="kocka">
 
@@ -47,8 +46,6 @@
                 <p>- Igrač gubi cijelokupan rezultat ako baci dvije 6 za redom</p>
             </div>
         </div>
-
-        
         <script src="app.js"></script>
     </body>
 </html>
