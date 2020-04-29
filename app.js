@@ -18,6 +18,7 @@ const naslovIgrac1 = document.getElementById('name-1');
 
 novaIgra();
 
+
 function novaIgra() {
   kockaEkran.src="dice.jpg";
   rezultatIgrac0 = 0;
@@ -29,7 +30,11 @@ function novaIgra() {
   ukupnirezultatIgrac1.textContent = 0;
   naslovIgrac0.textContent = 'Igrač 1';
   naslovIgrac1.textContent = 'Igrač 2';
+  naslovIgrac0.style.color= '#333';
+  naslovIgrac1.style.color= '#333';
+  
 };
+
 
 function bacajKockuFun(){
   let kocka = (Math.floor(Math.random() * 6)) + 1 ;
@@ -66,9 +71,11 @@ function bacajKockuFun(){
                 trenutnoBacanjeIgrac0.textContent = 0;
           }
   }
+
   zadnjeBacanje = kocka;
   kockaEkran.src = 'dice-'+ kocka + '.png'
 }
+
 
 function zadrziBacanje () {
   if( trenutniIgrac === 'name-0') {
