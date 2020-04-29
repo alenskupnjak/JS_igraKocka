@@ -7,14 +7,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    
 }
 
-.clearfix::after {
+/* .clearfix::after {
     content: "";
     display: table;
     clear: both;
-}
+} */
+
+
 
 body {
     background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(green.jpg);
@@ -51,21 +52,26 @@ body {
 /**********************************************
 *** PLAYERS
 **********************************************/
-ion-icon {
+/* ion-icon {
     font-size: 20px;
-  }
+  } */
 
 .pravila {
-    width: 80%;
-    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    /* float: left; */
     height: 320px;
     padding: 5px;
     margin-top: 10px;
     margin-left: 60px;
 }
+.pravila p{
+    font-size: 1.2rem;
+}
 
 .player-name {
-    font-size: 40px;
+    font-size: 2.5rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -77,20 +83,20 @@ ion-icon {
 
 .player-score {
     text-align: center;
-    font-size: 80px;
+    font-size: 5rem;
     font-weight: 100;
-    color: #EB4D4D;
+    color: darkred;
     margin-bottom: 130px;
 }
 
-.active { background-color: #eb8b8b; }
+.active { background-color: #a5d6a7; }
 .active .player-name { font-weight: 300; }
 
 .active .player-name::after {
-    content: "\2022";
+    /* content: "\2022"; */
     font-size: 47px;
     position: absolute;
-    color: #EB4D4D;
+    color: #28a746;
     top: -7px;
     right: 10px;
     
@@ -103,6 +109,7 @@ ion-icon {
     margin: 0 auto;
     padding: 12px;
     text-align: center;
+    border-radius: 5px;
 }
 
 .player-current-label {
@@ -113,18 +120,18 @@ ion-icon {
 }
 
 .player-current-score {
-    font-size: 30px;
+    font-size: 1.8rem;
 }
 
 button {
     position: absolute;
-    width: 200px;
+    /* width: 200px; */
     left: 50%;
     transform: translateX(-50%);
     color: #555;
     background: none;
     border: none;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     font-size: 20px;
     text-transform: uppercase;
     cursor: pointer;
@@ -132,7 +139,9 @@ button {
     transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover { font-weight: 600; }
+button:hover {
+    background: #0284d0;;
+}
 button:hover i { margin-right: 20px; }
 
 button:focus {
@@ -140,28 +149,76 @@ button:focus {
 }
 
 i {
-    color: #EB4D4D;
+    color: #28a746;
     display: inline-block;
     margin-right: 15px;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1;
     vertical-align: text-top;
     margin-top: -4px;
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
-.btn-roll { top: 403px;}
-.btn-hold { top: 467px;}
+.btn-new {
+    height: 3rem;
+    width: 10rem;
+    background:  darkred;
+    color:#fff;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    text-align: center;
+}
 
-.kocka{
+.btn-roll {
+     top: 403px;
+     height: 3rem;
+     width: 10rem;
+     background:  darkred;
+     color:#fff;
+     border-radius: 5px;
+     text-align: center;
+    
+}
+.btn-hold { 
+    top: 467px;
+    height: 3rem;
+    width: 10rem;
+    background:  darkred;
+    color:#fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.kocka {
     position: absolute;
     left: 50%;
     top: 178px;
     transform: translateX(-50%);
-    height: 100px;
+    height: 120px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.kocka:hover {
+    scale: 2;
+    transition: all 1s;
+    background: red;
 }
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+
+
+
+
+@media (max-width:768px)  {
+
+    .wrapper p {
+        font-size: 4rem;
+        color: #EB4D4D;
+        text-decoration: overline;
+    }
+
+}
