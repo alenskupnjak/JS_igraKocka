@@ -66,6 +66,7 @@ body {
     margin-top: 10px;
     margin-left: 60px;
 }
+
 .pravila p{
     font-size: 1.2rem;
 }
@@ -132,7 +133,7 @@ button {
     background: none;
     border: none;
     /* font-family: 'Roboto', sans-serif; */
-    font-size: 20px;
+    /* font-size: 20px; */
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 300;
@@ -161,34 +162,40 @@ i {
 
 .btn-new {
     height: 3rem;
-    width: 10rem;
+    width: 16rem;
     background:  darkred;
     color:#fff;
     border-radius: 5px;
-    font-size: 1.5rem;
-    padding: 0.5rem;
+    font-size: 2rem;
     margin: 1rem auto;
     text-align: center;
+    /* padding: 0 rem; */
 }
 
 .btn-roll {
-     top: 403px;
+     top: 360px;
      height: 3rem;
-     width: 10rem;
+     width: 16rem;
      background:  darkred;
      color:#fff;
      border-radius: 5px;
+     font-size: 2rem;
+     margin: 1rem auto;
      text-align: center;
-    
+     /* padding: 0.5rem; */
+     text-align: center;
 }
 .btn-hold { 
-    top: 467px;
+    top: 510px;
     height: 3rem;
-    width: 10rem;
+    width: 16rem;
     background:  darkred;
     color:#fff;
     border-radius: 5px;
+    font-size: 2rem;
+    margin: 1rem auto;
     text-align: center;
+    /* padding: 0.5rem; */
 }
 
 .kocka {
@@ -200,11 +207,7 @@ i {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.kocka:hover {
-    scale: 2;
-    transition: all 1s;
-    background: red;
-}
+
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
@@ -213,12 +216,9 @@ i {
 
 
 
-@media (max-width:768px)  {
-
-    .wrapper p {
-        font-size: 4rem;
-        color: #EB4D4D;
-        text-decoration: overline;
+@media (min-width:768px)  {
+    .pravila p{
+        font-size: 1.4rem;
     }
 
 }
