@@ -3,6 +3,7 @@ let rezultatIgrac1 = 0;
 let zbrojBacanja = 0;
 zadnjeBacanje = 0;
 trenutniIgrac = 'name-0';
+let granicaIgre = 50;
 const novaIgraBtn = document.querySelector('.btn-new');
 const baciKocku = document.querySelector('.btn-roll');
 const zadrziRazultat = document.querySelector('.btn-hold');
@@ -31,8 +32,7 @@ function novaIgra() {
   naslovIgrac0.textContent = 'Igrač 1';
   naslovIgrac1.textContent = 'Igrač 2';
   naslovIgrac0.style.color= '#333';
-  naslovIgrac1.style.color= '#333';
-  
+  naslovIgrac1.style.color= '#333';  
 };
 
 
@@ -94,12 +94,12 @@ function zadrziBacanje () {
     trenutnoBacanjeIgrac1.textContent = 0;
   }
 
-  if (rezultatIgrac0 > 50) {
+  if (rezultatIgrac0 > granicaIgre ) {
     naslovIgrac0.textContent = 'Pobjednik !';
     naslovIgrac0.style.color= 'magenta';
   }
 
-  if (rezultatIgrac1 > 50) {
+  if (rezultatIgrac1 > granicaIgre ) {
     naslovIgrac1.textContent = 'Pobjednik !';
     naslovIgrac1.style.color= 'magenta';
   }
