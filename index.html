@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/165d179615.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" type="image/icon" href="logoDice.jpg">
         <link rel="stylesheet" href="stylemoj.css">
         <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
         <title>Igra bacanja kockice</title>
@@ -12,7 +13,7 @@
 
     <body>
         <div class="container">
-            <button class="btn-nova-igra">Nova igra</button>
+            <button class="btn-nova-igra"><i class="fas fa-play"></i> Nova igra</button>
             <div class="igraci">
                 <div class="player-0-panel active">
                     <div class="player-name" id="name-0">Igrač 1</div>
@@ -32,10 +33,9 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- <button class="btn-new">Nova dddigra</button> -->
-            <button class="btn-roll"><ion-icon name="arrow-redo-outline"></ion-icon>Baci kocku</button>
-            <button class="btn-hold"><ion-icon name="logo-usd"></ion-icon>Zadrži skor kruga</button>
+
+            <button class="btn-roll"><i class="fas fa-reply"></i> Baci kocku</button>
+            <button class="btn-hold"><i class="fas fa-money-bill-wave"></i> Zadrži skor</button>
             
             <img src="dice.jpg" alt="Dice" class="kocka">
 
@@ -49,9 +49,9 @@
                     <p>- Igrač koji prijeđe 50 bodova je pobjednik</p>
                     <p>- Igrač gubi cijelokupan rezultat ako baci dvije 6 za redom</p>
                     
-                            <div id="pobjeda" class="pobjeda">
-                                    <h2>Pobjedio si</h2>
-                            </div>
+                <div id="pobjeda" class="pobjeda">
+                        <h2>Pobjedio si</h2>
+                </div>
             </div>
         </div>
         <script src="app.js"></script>
