@@ -1,0 +1,13 @@
+@media(max-width:600px) { 
+ button {
+  font-size: 2rem;
+}
+
+.player-current-box {
+  flex-direction: column;
+  font-size: 3rem;
+}
+
+
+
+}

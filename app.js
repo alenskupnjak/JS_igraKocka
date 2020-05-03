@@ -4,7 +4,7 @@ let zbrojBacanja = 0;
 zadnjeBacanje = 0;
 trenutniIgrac = 'name-0';
 let granicaIgre = 50;
-const novaIgraBtn = document.querySelector('.btn-new');
+const novaIgraBtn = document.querySelector('.btn-nova-igra');
 const baciKocku = document.querySelector('.btn-roll');
 const zadrziRazultat = document.querySelector('.btn-hold');
 const aktivIgrac0 = document.querySelector('.player-0-panel');
@@ -77,6 +77,7 @@ function bacajKockuFun(){
 }
 
 
+
 function zadrziBacanje () {
   if( trenutniIgrac === 'name-0') {
     rezultatIgrac0 =  rezultatIgrac0 + zbrojBacanja;
@@ -96,12 +97,12 @@ function zadrziBacanje () {
 
   if (rezultatIgrac0 > granicaIgre ) {
     naslovIgrac0.textContent = 'Pobjednik !';
-    naslovIgrac0.style.color= 'magenta';
+    naslovIgrac0.style.color= 'red';
   }
 
   if (rezultatIgrac1 > granicaIgre ) {
     naslovIgrac1.textContent = 'Pobjednik !';
-    naslovIgrac1.style.color= 'magenta';
+    naslovIgrac1.style.color= 'red';
   }
   kockaEkran.src="dice.jpg";
   zbrojBacanja = 0;
