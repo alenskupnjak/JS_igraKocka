@@ -110,7 +110,7 @@ function zadrziBacanje () {
 
 function pobjeda(data){  
   pobjedaMsg.style.display = 'block'
-  pobjedaMsg.innerHTML = ` <h2>Pobjedio je ${data}</h2>`
+  pobjedaMsg.innerHTML = `<h2>Pobjedio je ${data}</h2>`
 }
 
 baciKocku.addEventListener('click', bacajKockuFun);
