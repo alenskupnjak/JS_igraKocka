@@ -2,12 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/165d179615.js" crossorigin="anonymous"></script>
         <!-- <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script> -->
         <!-- <link type="text/css" rel="stylesheet" href="style.css"> -->
         <!-- <link type="text/css" rel="stylesheet" href="style.css"> -->
+        <!-- <link rel="stylesheet" href="mobile.css"> -->
         <link rel="stylesheet" href="stylemoj.css">
         <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
         <!-- <link type="text/css" rel="stylesheet" href="mobile.css"> -->
@@ -15,7 +17,7 @@
     </head>
 
     <body>
-        <div class="wrapper clearfix container">
+        <div class="container">
             <button class="btn-nova-igra">Nova igra</button>
             <div class="igraci">
                 <div class="player-0-panel active">
@@ -44,7 +46,7 @@
             <img src="dice.jpg" alt="Dice" class="kocka">
 
             <div class="pravila">
-                <h2>PRAVILA</h2>
+                <h2>PRAVILA IGRE</h2>
                     <p>- Igra ima 2 igrača koji igraju naizmjenično</p>
                     <p>- U svakom bacanju igrač baca kocku koliko god želi. Svaki rezultat jednog bacanja dodaje se trenutnom razultatu</p>
                     <p>- Ako igrač dobije 1, gubi trenutnu vrijednost bacanja. Gubi krug i sljedeči igrač baca kocku</p>
@@ -52,6 +54,10 @@
                     <p>- Igrač može zadržati trenutni rezultat bacanja pritisnuvši tipku ZADRŽI, što znači da se taj rezultat dodaje svom ukupnom rezultatu. Nakon toga, drugi igrač je na redu.</p>
                     <p>- Igrač koji prijeđe 50 bodova je pobjednik</p>
                     <p>- Igrač gubi cijelokupan rezultat ako baci dvije 6 za redom</p>
+                    
+                            <div id="pobjeda" class="pobjeda">
+                                    <h2>Pobjedio si</h2>
+                            </div>
             </div>
         </div>
         <script src="app.js"></script>

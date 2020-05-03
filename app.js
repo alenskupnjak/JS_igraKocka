@@ -3,7 +3,7 @@ let rezultatIgrac1 = 0;
 let zbrojBacanja = 0;
 zadnjeBacanje = 0;
 trenutniIgrac = 'name-0';
-let granicaIgre = 50;
+let granicaIgre = 10;
 const novaIgraBtn = document.querySelector('.btn-nova-igra');
 const baciKocku = document.querySelector('.btn-roll');
 const zadrziRazultat = document.querySelector('.btn-hold');
@@ -16,6 +16,7 @@ const ukupnirezultatIgrac0 = document.getElementById('score-0');
 const ukupnirezultatIgrac1 = document.getElementById('score-1');
 const naslovIgrac0 = document.getElementById('name-0');
 const naslovIgrac1 = document.getElementById('name-1');
+const pobjedaMsg = document.getElementById('pobjeda');
 
 novaIgra();
 
@@ -29,10 +30,9 @@ function novaIgra() {
   trenutnoBacanjeIgrac1.textContent = 0;
   ukupnirezultatIgrac0.textContent = 0;
   ukupnirezultatIgrac1.textContent = 0;
-  naslovIgrac0.textContent = 'Igrač 1';
-  naslovIgrac1.textContent = 'Igrač 2';
   naslovIgrac0.style.color= '#333';
-  naslovIgrac1.style.color= '#333';  
+  naslovIgrac1.style.color= '#333'; 
+  pobjedaMsg.style.display = 'none'
 };
 
 
@@ -96,17 +96,21 @@ function zadrziBacanje () {
   }
 
   if (rezultatIgrac0 > granicaIgre ) {
-    naslovIgrac0.textContent = 'Pobjednik !';
-    naslovIgrac0.style.color= 'red';
+    pobjeda('Igrač 1')
   }
 
   if (rezultatIgrac1 > granicaIgre ) {
-    naslovIgrac1.textContent = 'Pobjednik !';
-    naslovIgrac1.style.color= 'red';
+    pobjeda('Igrač 2')
   }
   kockaEkran.src="dice.jpg";
   zbrojBacanja = 0;
   zadnjeBacanje = 0;
+}
+
+
+function pobjeda(data){  
+  pobjedaMsg.style.display = 'block'
+  pobjedaMsg.innerHTML = ` <h2>Pobjedio je ${data}</h2>`
 }
 
 baciKocku.addEventListener('click', bacajKockuFun);

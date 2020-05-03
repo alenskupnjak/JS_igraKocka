@@ -20,7 +20,7 @@ body {
   text-align: center;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .igraci {
@@ -33,7 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 400px;
+  height: 330px;
   align-items: center;
   justify-content: space-around
 
@@ -49,8 +49,8 @@ body {
   left: 50%;
   top: 20%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 20px;
 }
 
@@ -69,8 +69,8 @@ button {
 .player-score {
   background: #c5e1a5;
   /* background: #fff; */
-  font-size: 3rem;
-  padding: 1.5rem;
+  font-size: 2.5rem;
+  padding: 1.3rem;
   border-radius: 50%;
   margin: auto;
   color: #333
@@ -86,7 +86,6 @@ button {
 .player-current-box {
   display: flex;
   margin: 0 0.5rem;
-  /* text-align: center; */
   align-items: center;
   /* justify-content: space-between; */
   font-size: 2.5rem;
@@ -104,9 +103,7 @@ button {
   justify-content: space-between;
   margin: 0.5rem 2rem;
   font-size: 2.5rem;
-  /* background-color: #b0bec5; */
   padding: 1rem;
-
 }
 
 .pravila {
@@ -115,4 +112,38 @@ button {
   /* color: aqua; */
   text-align: left;
   font-size: 1.2rem;
+}
+
+.pobjeda {
+background-color: rgba(0, 0, 0, 0.3);
+position: absolute;
+top: 80px;
+left: 0;
+bottom: 0;
+right: 0;
+align-items: center;
+text-align: center;
+justify-content: center;
+padding: 0.3rem;
+ display: none;
+ height: 500px;
+ opacity: 0.9;
+ color:red;
+}
+
+.pobjeda h2 {
+  margin-top: 150px;
+}
+
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* display: flex; */
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
