@@ -27,22 +27,20 @@ body {
   display: flex;
 }
 
-.player-0-panel ,
+.player-0-panel,
 .player-1-panel {
-  border: 2px solid  #607d8b;
+  border: 2px solid #607d8b;
   display: flex;
   flex-direction: column;
   width: 50%;
   height: 330px;
   align-items: center;
-  justify-content: space-around
-
+  justify-content: space-around;
 }
 
-.active  {
+.active {
   background: #607d8b;
 }
-
 
 .kocka {
   position: absolute;
@@ -54,9 +52,8 @@ body {
   border-radius: 20px;
 }
 
-
 button {
-  background:darkred;
+  background: darkred;
   padding: 1rem;
   border-radius: 5px;
   font-size: 1.4rem;
@@ -64,7 +61,17 @@ button {
   margin: 10px 4rem;
   color: #fff;
   outline: none;
+  /* transform: scale(1); */
+  /* transition: transform 0.2s ease-in; */
 }
+
+
+button:active {
+  transform: scale(0.95);
+  transition: transform 0.5s easy-in all;
+}
+
+
 
 .player-score {
   background: #c5e1a5;
@@ -73,14 +80,13 @@ button {
   padding: 1.3rem;
   border-radius: 50%;
   margin: auto;
-  color: #333
+  color: #333;
 }
 
 .player-name {
   font-size: 1.5rem;
   color: #333;
   /* background: mediumpurple; */
-  
 }
 
 .player-current-box {
@@ -109,26 +115,25 @@ button {
 .pravila {
   padding: 1rem;
   margin-top: 2rem;
-  /* color: aqua; */
   text-align: left;
   font-size: 1.2rem;
 }
 
 .pobjeda {
-background-color: rgba(0, 0, 0, 0.3);
-position: absolute;
-top: 80px;
-left: 0;
-bottom: 0;
-right: 0;
-align-items: center;
-text-align: center;
-justify-content: center;
-padding: 0.3rem;
- display: none;
- height: 500px;
- opacity: 0.9;
- color:red;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 80px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 0.3rem;
+  display: none;
+  height: 500px;
+  opacity: 0.9;
+  color: red;
 }
 
 .pobjeda h2 {

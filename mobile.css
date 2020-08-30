@@ -1,13 +1,11 @@
-@media(max-width:768px) { 
- button {
-  font-size: 1.5rem;
-  /* padding: 0.6rem; */
-}
+@media (max-width: 768px) {
+  button {
+    font-size: 1.5rem;
+    /* padding: 0.6rem; */
+  }
 
-.player-current-box {
-  flex-direction: column;
-  font-size: 3rem;
-}
-
-
+  .player-current-box {
+    flex-direction: column;
+    font-size: 3rem;
+  }
 }
