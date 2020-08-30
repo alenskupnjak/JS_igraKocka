@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/165d179615.js" crossorigin="anonymous"></script>
-        <link rel="shortcut icon" type="image/icon" href="logoDice.jpg">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
-        <title>Igra bacanja kockice</title>
-    </head>
 
-    <body>
-        <div class="container">
-            <button class="btn-nova-igra"><i class="fas fa-play"></i> Nova igra</button>
-            <div class="igraci">
-                <div class="player-0-panel active">
-                    <div class="player-name" id="name-0">Igrač 1</div>
-                    <div class="player-score" id="score-0">43</div>
-                    <div class="player-current-box">
-                        <div class="player-current-label">Skor</div>
-                        <div class="player-current-score" id="igrac-0">11</div>
-                    </div>
-                </div>
-                
-                <div class="player-1-panel">
-                    <div class="player-name" id="name-1">Igrač 2</div>
-                    <div class="player-score" id="score-1">72</div>
-                    <div class="player-current-box">
-                        <div class="player-current-label">Skor</div>
-                        <div class="player-current-score" id="igrac-1">12</div>
-                    </div>
-                </div>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/165d179615.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" type="image/icon" href="logoDice.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
+  <title>Igra bacanja kockice</title>
+</head>
 
-            <button class="btn-roll"><i class="fas fa-reply"></i> Baci kocku</button>
-            <button class="btn-hold"><i class="fas fa-money-bill-wave"></i> Zadrži skor</button>
-            
-            <img src="dice.jpg" alt="Dice" class="kocka">
-
-            <div class="pravila">
-                <h2>PRAVILA IGRE</h2>
-                    <p>- Igra ima 2 igrača koji igraju naizmjenično</p>
-                    <p>- U svakom bacanju igrač baca kocku koliko god želi. Svaki rezultat jednog bacanja dodaje se trenutnom razultatu</p>
-                    <p>- Ako igrač dobije 1, gubi trenutnu vrijednost bacanja. Gubi krug i sljedeči igrač baca kocku</p>
-    
-                    <p>- Igrač može zadržati trenutni rezultat bacanja pritisnuvši tipku ZADRŽI, što znači da se taj rezultat dodaje svom ukupnom rezultatu. Nakon toga, drugi igrač je na redu.</p>
-                    <p>- Igrač koji prijeđe 50 bodova je pobjednik</p>
-                    <p>- Igrač gubi cijelokupan rezultat ako baci dvije 6 za redom</p>
-                    
-                <div id="pobjeda" class="pobjeda">
-                        <h2>Pobjedio si</h2>
-                </div>
-            </div>
+<body>
+  <div class="container">
+    <button class="btn-nova-igra"><i class="fas fa-play"></i> Nova igra</button>
+    <div class="igraci">
+      <div class="player-0-panel active">
+        <div class="player-name" id="name-0">Igrač 1</div>
+        <div class="player-score" id="score-0">43</div>
+        <div class="player-current-box">
+          <div class="player-current-label">Skor</div>
+          <div class="player-current-score" id="igrac-0">11</div>
         </div>
-        <script src="app.js"></script>
-    </body>
+      </div>
+
+      <div class="player-1-panel">
+        <div class="player-name" id="name-1">Igrač 2</div>
+        <div class="player-score" id="score-1">72</div>
+        <div class="player-current-box">
+          <div class="player-current-label">Skor</div>
+          <div class="player-current-score" id="igrac-1">12</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-roll"><i class="fas fa-reply"></i> Baci kocku</button>
+    <button class="btn-hold"><i class="fas fa-money-bill-wave"></i> Zadrži skor</button>
+
+    <img src="dice.jpg" alt="Dice" class="kocka">
+
+    <div class="pravila">
+      <h2>PRAVILA IGRE</h2>
+      <p>- Igra ima 2 igrača koji igraju naizmjenično</p>
+      <p>- U svakom bacanju igrač baca kocku koliko god želi. Svaki rezultat jednog bacanja dodaje se trenutnom
+        razultatu</p>
+      <p>- Ako igrač dobije 1, gubi trenutnu vrijednost bacanja. Gubi krug i sljedeči igrač baca kocku</p>
+
+      <p>- Igrač može zadržati trenutni rezultat bacanja pritisnuvši tipku ZADRŽI, što znači da se taj rezultat dodaje
+        svom ukupnom rezultatu. Nakon toga, drugi igrač je na redu.</p>
+      <p>- Igrač koji prijeđe 50 bodova je pobjednik</p>
+      <p>- Igrač gubi cijelokupan rezultat ako baci dvije 6 za redom</p>
+
+      <div id="pobjeda" class="pobjeda">
+        <h2>Pobjedio si</h2>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
 </html>
