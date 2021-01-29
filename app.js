@@ -108,6 +108,8 @@ function pobjeda(data) {
   pobjedaMsg.innerHTML = `<h2>Pobjedio je ${data}</h2>`;
 }
 
+
+// Event Liseneri
 baciKocku.addEventListener('click', bacajKockuFun);
 novaIgraBtn.addEventListener('click', novaIgra);
 zadrziRazultat.addEventListener('click', zadrziBacanje);
